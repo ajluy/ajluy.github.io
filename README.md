@@ -1,1 +1,2 @@
 # ajluy.github.io
+This repository contains the source code for my personal website hosted at [ajluy.github.io](https://ajluy.github.io). The site is built using [Jekyll](https://jekyllrb.com/), a static site generator, and is designed to showcase my projects, blog posts, and other professional information.

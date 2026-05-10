@@ -79,6 +79,7 @@ ul {
 .site-nav {
   display: flex;
   gap: 2rem;
+  align-items: center;
 
   a {
     font-size: 0.9rem;
@@ -96,6 +97,35 @@ ul {
       padding-bottom: 1px;
     }
   }
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: 0;
+  background: $color-card;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-width: 120px;
+  padding: 0.35rem 0;
+  z-index: 200;
+
+  a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-bottom: none !important;
+  }
+}
+
+.nav-dropdown.is-open .nav-dropdown__menu {
+  display: block;
 }
 
 // =============================================================================
@@ -466,6 +496,68 @@ a.project-row:hover .project-row__title {
   strong {
     color: $color-text;
     font-weight: 600;
+  }
+}
+
+// =============================================================================
+// COURSES PAGE
+// =============================================================================
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.courses-semester__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $color-border;
+  margin-bottom: 0.25rem;
+}
+
+.courses-items {
+  list-style: none;
+  padding: 0;
+}
+
+.course-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid $color-border;
+  font-size: 0.9rem;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.course-item__number {
+  flex: 0 0 100px;
+  font-weight: 600;
+  color: $color-text-muted;
+  font-size: 0.825rem;
+  letter-spacing: 0.02em;
+}
+
+.course-item__name {
+  color: $color-text;
+}
+
+.courses-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $color-text-muted;
+
+  &:hover {
+    color: $color-text;
   }
 }
 

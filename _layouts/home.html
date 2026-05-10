@@ -5,7 +5,7 @@ layout: default
   {{ content }}
 
   {% assign sorted_projects = site.data.projects | sort: "date" | reverse %}
-  {% assign year_range = "2026,2025,2024,2023,2022" | split: "," %}
+  {% assign year_range = "2026,2025,2024" | split: "," %}
 
   {% for year in year_range %}
     {% assign year_projects = "" | split: "" %}

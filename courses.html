@@ -1,0 +1,21 @@
+---
+layout: page
+title: Courses
+permalink: /courses/
+---
+
+<div class="courses-list">
+  {% for semester in site.data.courses %}
+  <div class="courses-semester">
+    <h2 class="courses-semester__label">{{ semester.semester }}</h2>
+    <ul class="courses-items">
+      {% for course in semester.courses %}
+      <li class="course-item">
+        <span class="course-item__number">{{ course.number }}</span>
+        <span class="course-item__name">{{ course.name }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>

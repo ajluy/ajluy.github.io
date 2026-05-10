@@ -3,7 +3,27 @@
     <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav class="site-nav">
       <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
-      <a href="{{ '/resume/' | relative_url }}"{% if page.url == '/resume/' %} class="active"{% endif %}>Resume</a>
+      <div class="nav-dropdown">
+        <a href="{{ '/resume/' | relative_url }}"{% if page.url == '/resume/' or page.url == '/courses/' %} class="active"{% endif %}>Resume</a>
+        <div class="nav-dropdown__menu">
+          <a href="{{ '/courses/' | relative_url }}"{% if page.url == '/courses/' %} class="active"{% endif %}>Courses</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
+<script>
+  (function () {
+    var dropdown = document.querySelector('.nav-dropdown');
+    var timer;
+    dropdown.addEventListener('mouseenter', function () {
+      clearTimeout(timer);
+      dropdown.classList.add('is-open');
+    });
+    dropdown.addEventListener('mouseleave', function () {
+      timer = setTimeout(function () {
+        dropdown.classList.remove('is-open');
+      }, 400);
+    });
+  })();
+</script>

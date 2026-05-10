@@ -1,0 +1,48 @@
+# Project entries — reverse chronological (newest date first).
+# Fields:
+#   title:       Display name of the project
+#   date:        ISO date string "YYYY-MM-DD" (used for sort order)
+#   category:    List — Software | Electrical/Mechanical | Business & Analytics | Misc
+#   description: One-line summary (optional)
+#   image:       Path relative to site root, e.g. /assets/img/my-project.jpg (optional)
+#   url:         Link to demo, repo, or writeup — use "#" if none
+
+- title: "3D Foundations Project Portfolio"
+  date: "2026-01-15"
+  category:
+    - Misc
+  description: "3D foundations art project"
+  image: ""
+  url: "#"
+
+- title: "Project Title One"
+  date: "2026-01-15"
+  category:
+    - Software
+  description: "A short one-line description of what this project does."
+  image: ""
+  url: "#"
+
+- title: "Project Title Two"
+  date: "2025-09-10"
+  category:
+    - Electrical/Mechanical
+  description: "Brief summary of the design goals and outcome."
+  image: ""
+  url: "#"
+
+- title: "Project Title Three"
+  date: "2025-05-01"
+  category:
+    - Business & Analytics
+  description: "What data problem this solved and how."
+  image: ""
+  url: "#"
+
+- title: "Project Title Four"
+  date: "2025-01-20"
+  category:
+    - Misc
+  description: "A short description of this miscellaneous project."
+  image: ""
+  url: "#"

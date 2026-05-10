@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<div class="page-content">
+  {{ content }}
+
+  {% assign sorted_projects = site.data.projects | sort: "date" | reverse %}
+  {% assign year_range = "2026,2025,2024,2023,2022" | split: "," %}
+
+  {% for year in year_range %}
+    {% assign year_projects = "" | split: "" %}
+    {% for project in sorted_projects %}
+      {% assign proj_year = project.date | slice: 0, 4 %}
+      {% if proj_year == year %}
+        {% assign year_projects = year_projects | push: project %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="year-section">
+      <h2 class="year-section__label">{{ year }}</h2>
+      <div class="projects-list">
+        {% for project in year_projects %}
+          {% assign has_url = false %}
+          {% if project.url and project.url != "#" %}{% assign has_url = true %}{% endif %}
+
+          {% if has_url %}
+          <a class="project-row" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+          {% else %}
+          <div class="project-row">
+          {% endif %}
+
+            <div class="project-row__thumb">
+              {% if project.image and project.image != "" %}
+              <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+              {% endif %}
+            </div>
+
+            <div class="project-row__body">
+              <h3 class="project-row__title">{{ project.title }}</h3>
+              {% if project.description and project.description != "" %}
+              <p class="project-row__desc">{{ project.description }}</p>
+              {% endif %}
+            </div>
+
+            <div class="project-row__meta">
+              {% if project.category %}
+              <div class="project-row__tags">
+                {% for cat in project.category %}
+                <span class="tag">{{ cat }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+
+          {% if has_url %}
+          </a>
+          {% else %}
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -151,13 +151,14 @@ a.project-row:hover .project-row__title {
 
 .project-row__thumb {
   flex: 0 0 220px;
+  aspect-ratio: 16 / 9;
   border-radius: 6px;
   overflow: hidden;
   background: $color-border;
 
   img {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 100%;
     object-fit: cover;
     display: block;
   }

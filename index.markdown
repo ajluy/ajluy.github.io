@@ -3,7 +3,7 @@ layout: home
 ---
 <div class="home-intro">
   <h1 class="home-intro__name">Allen Jeremy Uy</h1>
-  <p class="home-intro__bio">Student at the University of Notre Dame studying Computer Engineering. I work on projects spanning software, hardware, and data, exploring projects from embedded systems to buissness analytics.</p>
+  <p class="home-intro__bio">Alumni of the University of Notre Dame where I studied Computer Engineering. I enjoy working on projects spanning software, hardware, and data, exploring projects from embedded systems to buissness analytics.</p>
   <div class="home-intro__links">
     {% if site.github_username %}
     <a class="home-intro__link" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a>

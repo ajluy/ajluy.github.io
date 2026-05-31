@@ -4,7 +4,19 @@ baseurl: ""
 url: "https://ajluy.github.io"
 
 github_username: ajluy
-linkedin_username: allen-jeremy-uy  # update with your LinkedIn slug
+linkedin_username: allen-jeremy-uy
 
 theme: minima
 plugins: []
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project

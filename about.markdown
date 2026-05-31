@@ -6,7 +6,7 @@ permalink: /about/
 
 <div class="about-section">
   <p class="section-label">Background</p>
-  <p>I'm Allen, an undergraduate studying [Your Major] at [University]. I'm drawn to problems at the intersection of software, hardware, and data — and I like building things that are both technically rigorous and practically useful.</p>
+  <p>I'm Allen, an Alumni of [University] where I studied [Your Major]. I'm drawn to problems at the intersection of software, hardware, and data — and I like building things that are both technically rigorous and practically useful.</p>
   <p>Outside of coursework I spend time on self-directed projects ranging from embedded systems to data pipelines. I'm currently looking for opportunities in [area of interest].</p>
 </div>
 

@@ -562,6 +562,203 @@ a.project-row:hover .project-row__title {
 }
 
 // =============================================================================
+// PROJECT DETAIL PAGE
+// =============================================================================
+
+.project-back {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $color-text-muted;
+  margin-bottom: 2rem;
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.project-header {
+  margin-bottom: 2rem;
+}
+
+.project-header__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-header__date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $color-text-muted;
+  letter-spacing: 0.03em;
+}
+
+.project-header__title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: $color-text;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.project-header__desc {
+  font-size: 1rem;
+  color: $color-text-muted;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.project-image {
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
+
+.project-content {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: $color-text;
+  padding-top: 1.5rem;
+  border-top: 1px solid $color-border;
+
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin: 2.25rem 0 0.75rem;
+    color: $color-text;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1.75rem 0 0.5rem;
+    color: $color-text;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $color-text-muted;
+    margin: 1.5rem 0 0.4rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+    list-style: disc;
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+  }
+
+  ol {
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+    list-style: decimal;
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+  }
+
+  a {
+    color: $color-accent-dark;
+    text-decoration: underline;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+  }
+
+  blockquote {
+    border-left: 3px solid $color-accent;
+    margin: 1.5rem 0;
+    padding: 0.5rem 0 0.5rem 1.25rem;
+    color: $color-text-muted;
+    font-style: italic;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.875em;
+    background: $color-border;
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+  }
+
+  pre {
+    background: $color-border;
+    border-radius: 6px;
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin-bottom: 1.25rem;
+
+    code {
+      background: none;
+      padding: 0;
+      font-size: 0.85rem;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid $color-border;
+    margin: 2rem 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+
+    th {
+      text-align: left;
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 2px solid $color-accent;
+    }
+
+    td {
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid $color-border;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  em {
+    font-style: italic;
+  }
+}
+
+// =============================================================================
 // FOOTER
 // =============================================================================
 
